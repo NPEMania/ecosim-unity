@@ -6,6 +6,10 @@ TagManager:
   tags:
   - food
   - organism
+  - floor
+  - walls
+  - foodSpace
+  - orgSpace
   layers:
   - Default
   - TransparentFX
