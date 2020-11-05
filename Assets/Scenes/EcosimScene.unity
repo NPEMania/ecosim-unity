@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 113730461}
   m_Layer: 9
   m_Name: OrgSpace
-  m_TagString: Untagged
+  m_TagString: orgSpace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,8 +147,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1447015136}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,8 +178,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500183114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 4, z: 101}
+  m_LocalPosition: {x: -100, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 4, z: 201}
   m_Children: []
   m_Father: {fileID: 914770127}
   m_RootOrder: 4
@@ -273,7 +272,7 @@ Transform:
   m_GameObject: {fileID: 520921373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 914770127}
   m_RootOrder: 0
@@ -339,75 +338,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520921373}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &589857910
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 113730461}
-    m_Modifications:
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863197579819970435, guid: 8e8108a154c24ab4a99486fd0973d472,
-        type: 3}
-      propertyPath: m_Name
-      value: Organism
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8e8108a154c24ab4a99486fd0973d472, type: 3}
 --- !u!1 &635124708
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,8 +365,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635124708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -50}
-  m_LocalScale: {x: 101, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: -100}
+  m_LocalScale: {x: 201, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 914770127}
   m_RootOrder: 2
@@ -602,6 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914770127}
+  - component: {fileID: 914770128}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -628,6 +559,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &914770128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914770126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d00bc45d8c90594792190f62839a4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodPrefab: {fileID: 8894392754028855315, guid: 25dae8240051b7345a94a0ec8967fb5a,
+    type: 3}
+  orgPrefab: {fileID: 5863197579819970435, guid: 8e8108a154c24ab4a99486fd0973d472,
+    type: 3}
+  foodSpace: {fileID: 1591083429}
+  orgSpace: {fileID: 113730460}
+  organisms: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,12 +661,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 56.210003, y: 0, z: 0}
---- !u!4 &1447015136 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5863197579819970425, guid: 8e8108a154c24ab4a99486fd0973d472,
-    type: 3}
-  m_PrefabInstance: {fileID: 589857910}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1488981391
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,8 +688,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488981391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 4, z: 101}
+  m_LocalPosition: {x: 100, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 4, z: 201}
   m_Children: []
   m_Father: {fileID: 914770127}
   m_RootOrder: 3
@@ -821,7 +765,7 @@ GameObject:
   - component: {fileID: 1591083430}
   m_Layer: 8
   m_Name: FoodSpace
-  m_TagString: Untagged
+  m_TagString: foodSpace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -867,8 +811,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705541692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 50}
-  m_LocalScale: {x: 101, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 100}
+  m_LocalScale: {x: 201, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 914770127}
   m_RootOrder: 1

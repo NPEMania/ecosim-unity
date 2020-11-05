@@ -14,6 +14,8 @@ public class Organism : MonoBehaviour {
     private Vector3 velocity;
     private bool isWandering = true;
     public HashSet<GameObject> foodSet;
+    private CapsuleCollider capsule;
+    private FoodCollisionDetector child;
 
     public void setValues(float speed, float range, float angle) {
         this.speed = speed;
@@ -23,9 +25,11 @@ public class Organism : MonoBehaviour {
 
     private void Start() {
         body = GetComponent<Rigidbody>();
+        capsule = GetComponent<CapsuleCollider>();
+        capsule.isTrigger = false;
         wanderTarget = transform.position + Constants.posAroundRadius(2, transform.position.y);
-        FoodCollisionDetector detector = GetComponentInChildren<FoodCollisionDetector>();
-        detector.initialize(range, angle);
+        child = GetComponentInChildren<FoodCollisionDetector>();
+        child.initialize(range, angle);
     }
 
     private void FixedUpdate() {
@@ -43,6 +47,7 @@ public class Organism : MonoBehaviour {
     }
 
     public void setTarget(GameObject other) {
+        capsule.isTrigger = true;
         Vector3 targetPos = other.transform.position - new Vector3(0, other.transform.position.y - transform.position.y);
         velocity = Constants.dir(transform.position, targetPos) * speed;
         target = other;
@@ -53,12 +58,14 @@ public class Organism : MonoBehaviour {
         return target;
     }
     
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         Debug.Log("Organism OnCollisionEnter: " + other.gameObject.tag);
         if (other.gameObject.CompareTag("food")) {
             foodSet.Remove(other.gameObject);
             Destroy(other.gameObject);
             target = null;
+            child.turnOnCollider();
+            capsule.isTrigger = false;
             ++score;
         } else if (other.gameObject.CompareTag("walls")){
             velocity *= -1;
@@ -78,8 +85,8 @@ public class Organism : MonoBehaviour {
         Vector3 rayB = Constants.dirFromAngle(-angle / 2);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * range);
-        Gizmos.DrawLine(transform.position, transform.position + rayA * range);
-        Gizmos.DrawLine(transform.position, transform.position + rayB * range);
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * range * 3);
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward - rayA * range * 3);
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward - rayB * range * 3);
     }
 }

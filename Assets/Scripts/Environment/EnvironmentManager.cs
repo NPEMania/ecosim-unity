@@ -20,8 +20,10 @@ public class EnvironmentManager : MonoBehaviour {
 
     private void spawnFood() {
         for (int i = 0; i < 20; ++i) {
+            Vector2 circ = Random.insideUnitCircle;
+            Vector3 pos = Random.Range(5, 50) * new Vector3(circ.x, 0, circ.y);
             GameObject food = Instantiate(foodPrefab,
-                new Vector3(Random.Range(-25, 25), 0.5f, Random.Range(-25, 25)),
+                pos,
                 Quaternion.identity
             );
             food.transform.parent = foodSpace.transform;
@@ -31,8 +33,8 @@ public class EnvironmentManager : MonoBehaviour {
 
     private void spawnOrganisms() {
         Organism org = Organism.Create(foodSet, orgPrefab, orgSpace.transform,
-            new Vector3(0, 3, -48), Vector3.forward,
-            7, 8, 120
+            new Vector3(0, 3, -90), Vector3.forward,
+            7, 8, 180
         );
         //North Wall
         //South Wall
