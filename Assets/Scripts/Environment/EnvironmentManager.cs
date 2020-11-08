@@ -21,7 +21,8 @@ public class EnvironmentManager : MonoBehaviour {
     private void spawnFood() {
         for (int i = 0; i < 20; ++i) {
             Vector2 circ = Random.insideUnitCircle;
-            Vector3 pos = Random.Range(5, 50) * new Vector3(circ.x, 0, circ.y);
+            float f = Random.Range(5, 50);
+            Vector3 pos =  new Vector3(f*circ.x, 2f, f*circ.y);
             GameObject food = Instantiate(foodPrefab,
                 pos,
                 Quaternion.identity

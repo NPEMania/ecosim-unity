@@ -22,12 +22,14 @@ public class FoodCollisionDetector : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+
+        Debug.Log("FoodCollisionDetector: child "+other.gameObject.tag);
         if (other.gameObject.CompareTag("food") && validDir(other.gameObject)) {
             GameObject oldTarget = parentOrganism.getTarget();
             Debug.Log("FCD: triggered: " + other.tag);
             if (oldTarget == null) {
                 parentOrganism.setTarget(other.gameObject);
-                sphereCollider.isTrigger = false;
+                //sphereCollider.isTrigger = false;
             } else {
                 float oldDist = Vector3.Distance(transform.parent.position, oldTarget.transform.position);
                 float newDist = Vector3.Distance(transform.parent.position, other.transform.position);
@@ -43,6 +45,6 @@ public class FoodCollisionDetector : MonoBehaviour
     }
 
     public void turnOnCollider() {
-        sphereCollider.isTrigger = true;
+       // sphereCollider.isTrigger = true;
     }
 }

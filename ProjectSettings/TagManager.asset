@@ -10,6 +10,7 @@ TagManager:
   - walls
   - foodSpace
   - orgSpace
+  - foodnew
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - food
   - organism
-  - 
+  - foodNewLayer
   - 
   - 
   - 

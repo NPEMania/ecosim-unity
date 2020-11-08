@@ -57,20 +57,35 @@ public class Organism : MonoBehaviour {
     public GameObject getTarget() {
         return target;
     }
-    
-    private void OnTriggerEnter(Collider other) {
-        Debug.Log("Organism OnCollisionEnter: " + other.gameObject.tag);
-        if (other.gameObject.CompareTag("food")) {
-            foodSet.Remove(other.gameObject);
-            Destroy(other.gameObject);
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("food"))
+        {
+            foodSet.Remove(collision.gameObject);
+            Destroy(collision.gameObject);
             target = null;
-            child.turnOnCollider();
-            capsule.isTrigger = false;
+            //child.turnOnCollider();
+            //capsule.isTrigger = false;
             ++score;
-        } else if (other.gameObject.CompareTag("walls")){
+        }
+        else if (collision.gameObject.CompareTag("walls"))
+        {
             velocity *= -1;
         }
     }
+   // private void OnTriggerEnter(Collider other) {
+     //   Debug.Log("Organism OnCollisionEnter: P " + other.gameObject.tag);
+      //  if (other.gameObject.CompareTag("food") ) {
+      //      foodSet.Remove(other.gameObject);
+       //     Destroy(other.gameObject);
+        //    target = null;
+       //     child.turnOnCollider();
+       //     capsule.isTrigger = false;
+      //      ++score;
+      //  } else if (other.gameObject.CompareTag("walls")){
+      //      velocity *= -1;
+       // }
+    //}
 
     public static Organism Create(HashSet<GameObject> foods ,GameObject prefab, Transform parent, Vector3 pos, Vector3 dir, float speed, float range, float angle) {
         GameObject gObj = Instantiate(prefab, pos, Quaternion.LookRotation(dir));
