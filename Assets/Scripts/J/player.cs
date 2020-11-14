@@ -25,6 +25,7 @@ public class player : MonoBehaviour
 
         body = GetComponent<Rigidbody>();
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("walls"))
@@ -37,50 +38,29 @@ public class player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("foodnew"))
         {
-            Debug.Log("food");
+            Debug.Log("food ate");
+           
             Destroy(collision.gameObject);
-            isWandering = false;
+         
             target = null;
 
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (target == null)
         {
-            if (isWandering == false)
-            {
-
-                StartCoroutine(wanderNew());
-            }
-           
-
-            if (isRotRight == true)
-            {
-                transform.Rotate(transform.up * Time.deltaTime * rotSpeed);
-            }
-
-            if (isRotLeft == true)
-            {
-                transform.Rotate(transform.up * Time.deltaTime * -rotSpeed);
-            }
-
-            if (isWalking == true)
-            {
-                transform.position += (transform.forward * Time.deltaTime * moveSpeed);
-
-            }
-
+            wander();
         }
+
         else
         {
-       
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
-
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+        }
             
 
-        }
+        
     }
 
     private void wander()
@@ -92,13 +72,9 @@ public class player : MonoBehaviour
     {
      
         target = other;
-        isWandering = true;
-        isWalking = false;
-        isRotRight = false;
-        isRotLeft = false;
-
+        
         Debug.Log(" target food set");
-        StopAllCoroutines();
+     
 
 
     }
