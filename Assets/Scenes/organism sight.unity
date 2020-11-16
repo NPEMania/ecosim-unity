@@ -989,75 +989,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387539344}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1529653110
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6472222864806249104, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_Name
-      value: FoodnewSet
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6472222864806249105, guid: 10572abfe5e682840bdeccdfa9f695af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10572abfe5e682840bdeccdfa9f695af, type: 3}
 --- !u!1 &1760367747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5921713063248944353, guid: 16fc9b86d382c864fbb58c3f1dd9d5a1, type: 3}
   foodNew: {fileID: 7718183783354883949, guid: e80c663624c258b41b6f8fedb2da90b6, type: 3}
-  zMax: 40
-  xMax: 40
-  initCount: 20
-  population: 10
+  zMax: 60
+  xMax: 60
+  initCount: 30
+  population: 30
+  agents: []
