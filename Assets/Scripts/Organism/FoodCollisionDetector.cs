@@ -21,7 +21,7 @@ public class FoodCollisionDetector : MonoBehaviour
         this.angle = angle;
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerStay(Collider other) {
 
         Debug.Log("FoodCollisionDetector: child "+other.gameObject.tag);
         if (other.gameObject.CompareTag("food") && validDir(other.gameObject)) {

@@ -12,7 +12,7 @@ public class Organism : MonoBehaviour {
     private GameObject target;
     private Rigidbody body;
     private Vector3 velocity;
-    private bool isWandering = true;
+    // private bool isWandering = true;
     public HashSet<GameObject> foodSet;
     private CapsuleCollider capsule;
     private FoodCollisionDetector child;
