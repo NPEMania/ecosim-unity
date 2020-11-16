@@ -1,5 +1,4 @@
 import pandas as pd
-from matplotlib import pyplot as plot
 
 def read_file():
     stats = open('gen_stats.txt', mode='r')
@@ -18,7 +17,7 @@ def read_file():
         angle.append(float(sp[3]))
         range_.append(float(sp[4]))
         speed.append(float(sp[5]))
-        speed.append(float(sp[6]))
+        rspeed.append(float(sp[6]))
     data = {}
     data['gen'] = gen
     data['score'] = score
@@ -27,8 +26,12 @@ def read_file():
     data['range'] = range_
     data['speed'] = speed
     data['rspeed'] = rspeed
-    return pd.Dataframe(data)
+    debug(data)
+    return pd.DataFrame.from_dict(data)
 
+def debug(data): 
+    for key in data:
+        print(f"{key}: {len(data[key])}")
 
 def main():
     df = read_file()
